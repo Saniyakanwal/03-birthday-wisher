@@ -1,11 +1,11 @@
-`use client`;
-import React,{useState,useEffect} from "react";
+"use client"
+import { useState,useEffect} from "react";
 import { Button } from "./ui/button";
 import { Card,CardContent,CardDescription,CardHeader,CardTitle,CardFooter } from "./ui/card";
 import dynamic from "next/dynamic";
-import {motion,AnimatePresence} from `framer-motion`;
-import {FaBirthdayCake,FaGift} from `react-icons/fa`;
-import {GiBalloons} from `react-icons/gi`;
+import {motion,AnimatePresence} from 'framer-motion';
+import {FaBirthdayCake,FaGift} from 'react-icons/fa';
+import {GiBalloons} from 'react-icons/gi';
 
 type ConfettiProps = {
     width:number;
@@ -72,7 +72,7 @@ useEffect(() => {
     }, 500)
   }
     return(
-        <div className="min-h-screen bg-white flex items-center justify-center p-4">
+        <div className="min-h-screen bg-black flex items-center justify-center p-4">
         <motion.div
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
@@ -81,15 +81,15 @@ useEffect(() => {
         >
           <Card className="mx-auto overflow-hidden transition-all duration-300 ease-in-out hover:shadow-xl border-2 border-black">
             <CardHeader className="text-center">
-              <CardTitle className="text-4xl font-bold text-black">Happy 20th Birthday!</CardTitle>
-              <CardDescription className="text-2xl font-semibold text-gray-600">Asharib Ali</CardDescription>
-              <p className="text-lg text-gray-500">September 4th</p>
+              <CardTitle className="text-4xl font-bold text-black">Happy 19th Birthday!</CardTitle>
+              <CardDescription className="text-2xl font-semibold text-gray-600">Saniya kanwal</CardDescription>
+              <p className="text-lg text-gray-500">June 14th</p>
             </CardHeader>
             <CardContent className="space-y-6 text-center">
               <div>
                 <h3 className="text-lg font-semibold text-black mb-2">Light the candles:</h3>
                 <div className="flex justify-center space-x-2">
-                  {[...Array(totalCandles)].map((_, index) => (
+                  {[...Array(totalcandles)].map((_, index) => (
                     <AnimatePresence key={index}>
                       {(celebrating && index <= candlesLit) || (!celebrating && index < candlesLit) ? (
                         <motion.div
@@ -151,7 +151,7 @@ useEffect(() => {
             width={windowSize.width}
             height={windowSize.height}
             recycle={false}
-            numberOfPieces={500}
+            numberOfPieces={1000}
             colors={confettiColors}
           />
         )}
